@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <header class="flex justify-between items-center p-4 bg-[#4c74ff] shadow-lg sticky top-0 z-50">
+        <img class="w-14 h-14" src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt="logo website">
+        <h1 class="text-white md:text-2xl text-lg font-bold">Adnan's Company Website</h1>
+        <button id="menu-toggle" class="hover:bg-blue-700 text-center p-2 rounded md:hidden text-white text-3xl">☰</button>
+
+        <nav class="hidden md:flex flex-row gap-12 text-white font-bold text-lg">
+            <a href="#welcome" class="hover:text-[#4c74ff] hover:bg-blue-100 p-1 rounded">Home</a>
+            <a href="#profile" class="hover:text-[#4c74ff] hover:bg-blue-100 p-1 rounded">Our Profile</a>
+            <a href="#portfolio" class="hover:text-[#4c74ff] hover:bg-blue-100 p-1 rounded">Portfolio</a>
+            <a href="#message" class="hover:text-[#4c74ff] hover:bg-blue-100 p-1 rounded">Message Us</a>
+        </nav>
+
+        <nav id="mobile-menu"
+            class="w-fit text-center fixed top-24 right-4  z-40 bg-white shadow-xl rounded-xl p-4 space-y-4 hidden md:hidden text-[#4c74ff] font-semibold text-lg">
+            <a href="#welcome" class="block hover:bg-blue-50 rounded p-2">Home</a>
+            <a href="#profile" class="block hover:bg-blue-50 rounded p-2">Our Profile</a>
+            <a href="#portfolio" class="block hover:bg-blue-50 rounded p-2">Portfolio</a>
+            <a href="#message" class="block hover:bg-blue-50 rounded p-2">Message Us</a>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome" class="bg-[#fffdf8] scroll-mt-20">
+            <div class="flex flex-col gap-2 p-4 bg-[#4c74ff]">
+                <h1 id="welcoming" class="text-[#fffdf8] text-2xl font-bold text-center">Welcome [Nama]!</h1>
+                <p class="text-[#fffdf8] text-lg text-center">This website was created as part of my mini coding project at RevoU. Through this platform, I’m applying the skills I've learned in HTML, CSS, and JavaScript to build this. Feel free to explore, try out the features, and see what I’ve been working on. Thank you for visiting!</p>
+            </div>
+            <div>
+                <img src="assets/banner mini.png" alt="">
+            </div>
+        </section>
+        <section id="profile" class="flex flex-col items-center gap-4 bg-[#4c74ff] p-4 scroll-mt-20">
+            <h1 class="text-2xl font-bold text-[#fffdf8]">Our Profile</h1>
+            <img src="assets/foto.jpg" class="h-54 w-54 object-cover rounded-full border-4 border-[#fffdf8]">
+            <div class="flex flex-col bg-[#fffdf8] p-4 rounded items-center w-full md:w-1/2">
+                <h1 class="text-xl font-bold text-[#4c74ff]">About Me</h1>
+                <p class="text-justify">My name is Bima Adnandita, an Informatics student at UPN Veteran Jakarta with a strong passion for user interface and user experience design. My interest in this field led me to study UI/UX and web development. I’ve worked on various UI/UX projects for competitions—each experience helping me grow, even without a win. Beyond academics, I enjoy watching YouTube and playing games, activities that fuel my creativity and inspire me to design innovative digital solutions.</p>
+            </div>
+        </section>
+        <section id="portfolio" class="flex flex-col justify-center items-center p-4 gap-4 scroll-mt-20">
+            <h1 class="text-2xl font-bold">Portfolio</h1>
+            <div>
+                <h1 class="text-xl font-bold text-[#4c74ff] text-center">UI/UX</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-md justify-center items-center flex flex-col gap-2">
+                        <img src="assets/moona.png" alt="moona project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">MoonA Project</h1>
+                        <a href="https://www.figma.com/proto/OQxQLOkie7GEXHjHFPVA25/Design-UI?page-id=13%3A504&node-id=83-261&p=f&viewport=197%2C86%2C0.04&t=IthbIHvizSozbxUm-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=83%3A531&show-proto-sidebar=1" class="text-center bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/beres.png" alt="beres project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">BERES Project</h1>
+                        <a href="https://www.figma.com/proto/nh4vVms0yzRCooL3cSq6tJ/Hi-Fi-Beres?page-id=0%3A1&node-id=1-2&p=f&viewport=216%2C254%2C0.13&t=ColOPrLkqoF8JMaA-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=91%3A863&show-proto-sidebar=1" class="text-center bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/motorizz.png" alt="motorizz project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">MotoRizz Project</h1>
+                        <a href="https://www.figma.com/proto/DBR9mmEyB34m8xhykObzMv/DESIGN-UI-UX?page-id=1%3A3&node-id=40-236&p=f&viewport=1521%2C-493%2C0.19&t=uCDZ0xC9RVeezKsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=129%3A1824&show-proto-sidebar=1" class="text-center bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/testverse.png" alt="TestVerse project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">TestVerse Project</h1>
+                        <a href="https://www.figma.com/proto/Q4k5rU8kGJUeBJjv9mjGqn/AndroidChampionship2024-Design?page-id=2%3A3&node-id=26-540&p=f&viewport=1065%2C287%2C0.05&t=HpaRYlMwTZWl6tgG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=26%3A495&show-proto-sidebar=1" class="text-center bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/androidprotal.png" alt="androidprotal project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">Android Portal Project</h1>
+                        <button disabled class="cursor-not-allowed bg-gray-400 text-[#fffdf8] font-bold py-2 px-4 rounded w-full">View Project</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-[#4c74ff] text-center">FrontEnd</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/upnext.png" alt="upnext project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">UpNext Project</h1>
+                        <a href="https://upnext-eta.vercel.app/" class="text-center cursor-pointer bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-[#4c74ff] text-center">BackEnd</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                    <div class="bg-[#fffdf8] p-4 rounded shadow-lg justify-center items-center flex flex-col gap-2">
+                        <img src="assets/tiketservice.png" alt="backend project" class="w-full h-48 object-cover rounded">
+                        <h1 class="text-center font-bold text-lg">Ticket Service Project</h1>
+                        <a href="https://github.com/qitqath/service-ticketing" class="text-center cursor-pointer bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="message" class="scroll-mt-20">
+            <div class="flex flex-col items-center gap-4 p-4 bg-[#4c74ff]">
+                <h1 class="text-2xl font-bold text-white">Message Us</h1>
+                <form id="message-form" class="flex flex-col gap-4 w-full md:w-1/2 mx-auto p-4 bg-[#fffdf8] rounded shadow-lg">
+                    <label for="name" class="font-bold">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" class="p-2 border border-gray-300 rounded" required>
+                    <label for="tanggal-lahir" class="font-bold">Birth Date</label>
+                    <input type="date" id="tanggal-lahir" placeholder="Your Birth Date" class="p-2 border border-gray-300 rounded" required>
+                    <label for="jenis-kelamin" class="font-bold">Gender</label>
+                    <div class="flex flex-row items-center">
+                        <input type="radio" id="jenis-kelamin" name="gender" value="male" class="mr-2" required>
+                        <label for="jenis-kelamin" class="mr-4">Male</label>
+                        <input type="radio" id="jenis-kelamin" name="gender" value="female" class="mr-2" required>
+                        <label for="jenis-kelamin" class="mr-4">Female</label>
+                    </div>
+                    <label for="message" class="font-bold">Message</label>
+                    <textarea id="pesan" placeholder="Your Message" class="p-2 border border-gray-300 rounded" required></textarea>
+                    <button type="submit" class="cursor-pointer bg-[#4c74ff] text-[#fffdf8] font-bold py-2 px-4 rounded w-full hover:bg-[#3b5cbf]">Send Message</button>
+                </form>
+            </div>
+            <div class="flex flex-cols w-full md:w-1/2 gap-4 p-4 bg-[#fffdf8] mx-auto">
+                <article id="message-card" class="flex flex-col gap-4 p-4 bg-[#fffdf8] rounded shadow-lg w-full mx-auto mt-4">
+                    <div class="flex flex-row gap-2">
+                        <label for="current-time" class="font-bold">Current Time:</label>
+                        <p id="current-time"></p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <label for="name-output" class="font-bold">Name:</label>
+                        <p id="name-output"></p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <label for="birth-output" class="font-bold">Birth Date:</label>
+                        <p id="birth-output"></p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <label for="gender-output" class="font-bold">Gender:</label>
+                        <p id="gender-output"></p>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <label for="message-output" class="font-bold">Message:</label>
+                        <p id="message-output"></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#4c74ff] text-[#fffdf8] text-center py-2">Created by Bima Adnandita</footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
